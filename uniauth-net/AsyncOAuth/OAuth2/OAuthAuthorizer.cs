@@ -127,8 +127,8 @@ namespace AsyncOAuth.OAuth2
                 }
 	        }
          
-            var data= extraData.ToLookup(kv=> kv.Key, kv=> kv.Value)
-            var token = tokenFactory(accessToken, data)
+            var data= extraData.ToLookup(kv=> kv.Key, kv=> kv.Value);
+            var token = tokenFactory(accessToken, data);
             return new TokenResponse<T>(token);
         }
 
